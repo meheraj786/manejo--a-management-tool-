@@ -1,8 +1,14 @@
 import React from 'react'
+import BoardList from '../BoardList/BoardList'
+import BoardCreatingForm from '../BoardCreating/BoardCreatingForm'
 
 const Boards = () => {
   return (
-    <div>Boards</div>
+    <>
+    <BoardCreatingForm/>
+    <BoardList/>
+    
+    </>
   )
 }
 
