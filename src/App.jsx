@@ -6,7 +6,8 @@ import { MdDelete } from "react-icons/md";
 import { FaDeleteLeft } from "react-icons/fa6";
 import { MdFormatListBulletedAdd } from "react-icons/md";
 import { TbCancel } from "react-icons/tb";
-import { CiSearch } from "react-icons/ci";
+import { MdOutlineClear } from "react-icons/md";
+
 
 
 function App() {
@@ -103,17 +104,15 @@ function App() {
 
   
 
-  
-  const searchHandler= ()=>{
-    if (searchBoard.trim()=="") (
-      setSearchBoard(null)
-    )
-    const filteredBoards = boards.filter(board =>
-  board.title.toLowerCase().includes(search.toLowerCase())
+
+const searchHandler= ()=>{
+  const filteredBoards = boards.filter(board =>
+board.title.toLowerCase().includes(search.toLowerCase())
 );
-    console.log(filteredBoards);
-    setSearchBoard(filteredBoards)
-  }
+  console.log(filteredBoards);
+  setSearchBoard(filteredBoards)
+}
+  
 
   return (
     <div className="w-[1320px] p-10 mx-auto bg-[#50428A] h-[60vh] mt-10 rounded-2xl px-5">
@@ -143,7 +142,11 @@ function App() {
           searchHandler()
 
           }} placeholder="Search Your Board" className="!bg-transparent !border-b !w-auto !border-gray-500"/>
-        <span className="px-2 absolute right-0"><CiSearch />
+        <span onClick={()=>(
+  setSearchBoard(null),
+  setSearch("")
+)} className="px-2 absolute right-2 top-1/2 -translate-y-1/2"><MdOutlineClear />
+
 </span>
         </div>
 
