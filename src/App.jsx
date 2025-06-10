@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
 import { SiGooglecampaignmanager360 } from "react-icons/si";
 import { IoIosAddCircleOutline } from "react-icons/io";
@@ -115,7 +115,7 @@ board.title.toLowerCase().includes(search.toLowerCase())
   
 
   return (
-    <div className="w-[1320px] p-10 mx-auto bg-[#50428A] h-[60vh] mt-10 rounded-2xl px-5">
+    <div className="lg:w-[1320px] w-full p-10 mx-auto bg-[#50428A] min-h-[60vh] mt-10 rounded-2xl px-2 lg:px-5">
       <h1 className="text-center flex items-center justify-center gap-x-3 mb-10">
         Manejo <SiGooglecampaignmanager360 />
       </h1>
@@ -145,15 +145,15 @@ board.title.toLowerCase().includes(search.toLowerCase())
         <span onClick={()=>(
   setSearchBoard(null),
   setSearch("")
-)} className="px-2 absolute right-2 top-1/2 -translate-y-1/2"><MdOutlineClear />
+)} className="px-2 absolute lg:right-2 right-0 top-1/2 -translate-y-1/2"><MdOutlineClear />
 
 </span>
         </div>
 
-      <div className="boards overflow-hidden mt-[150px] flex flex-wrap items-start justify-center gap-10">
+      <div className="boards overflow-hidden mt-[100px] flex flex-wrap items-start justify-center gap-y-7 gap-x-3 lg:gap-10">
         
         {(searchBoard ?? boards).map((board) => (
-            <div key={board.id} className="board wrap-anywhere">
+            <div key={board.id} className="board lg:w-[20%] w-[48%] wrap-anywhere">
               <h2 className="flex justify-between  items-center">
                 {board.title}
                 <span
