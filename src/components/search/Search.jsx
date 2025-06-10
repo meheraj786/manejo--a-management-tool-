@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import { AllContext } from '../../context/AllContext';
 
 const Search = () => {
-  const {search,setSearch,searchHandler,setSearchBoard   }= useContext(AllContext)
+  const {search,setSearch,searchHandler,setSearchBoard, MdOutlineClear   }= useContext(AllContext)
 
 
 

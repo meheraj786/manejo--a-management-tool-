@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import { AllContext } from '../../context/AllContext'
 
 const BoardCreatingForm = () => {
-  const {boardTitle,setBoardTitle,addBoard }= useContext(AllContext)
+  const {boardTitle,setBoardTitle,addBoard, IoIosAddCircleOutline }= useContext(AllContext)
 
   
 
