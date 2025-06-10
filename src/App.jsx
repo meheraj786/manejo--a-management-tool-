@@ -145,7 +145,7 @@ board.title.toLowerCase().includes(search.toLowerCase())
         <span onClick={()=>(
   setSearchBoard(null),
   setSearch("")
-)} className="px-2 absolute lg:right-2 right-0 top-1/2 -translate-y-1/2"><MdOutlineClear />
+)} className="px-2 absolute lg:right-2 -right-18 top-1/2 -translate-y-1/2"><MdOutlineClear />
 
 </span>
         </div>
