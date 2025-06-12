@@ -10,7 +10,7 @@ const BoardStructure = ({board}) => {
               <h2 className="flex justify-between  items-center">
                 {board.title}
                 <span
-                  onClick={()=>removeBoard({board})}
+                  onClick={()=>removeBoard(board)}
                   className="cursor-pointer"
                 >
                   <MdDelete className="text-[20px]" />

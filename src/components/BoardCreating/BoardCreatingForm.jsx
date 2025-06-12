@@ -1,13 +1,18 @@
 import React, { useContext } from 'react'
 import { AllContext } from '../../context/AllContext'
+import Toast from '../flowbite/Toast';
 
 const BoardCreatingForm = () => {
-  const {boardTitle,setBoardTitle,addBoard, IoIosAddCircleOutline }= useContext(AllContext)
-
+  const {boardTitle,setBoardTitle,addBoard, IoIosAddCircleOutline, show }= useContext(AllContext)
+  
+    const toast = (
+    <Toast/>
+  );
   
 
   return (
           <div className="boardInput text-center flex items-center justify-center gap-x-2">
+              {show && toast}
             <input
               className="!w-auto outline-none border-none"
               type="text"
