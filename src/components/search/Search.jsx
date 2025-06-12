@@ -11,7 +11,7 @@ const Search = () => {
           <input type="text" value={search} onChange={(e)=>{setSearch(e.target.value);
           searchHandler()
 
-          }} placeholder="Search Your Board" className="!bg-transparent !border-b !w-auto !border-gray-500"/>
+          }} placeholder="Search Your Board" className="!bg-transparent outline-none !border-b !w-auto !border-gray-500"/>
         <span onClick={()=>(
   setSearchBoard(null),
   setSearch("")
